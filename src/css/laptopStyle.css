@@ -1,0 +1,50 @@
+:root {
+  /* Colores */
+  --Tibu-grey: rgb(58, 56, 60);
+  --black: #000000;
+  --just-white: #ffffff;
+}
+
+.header--logo-container {
+  min-width: 100px;
+  min-height: 150px;
+  margin-bottom: 5px;
+}
+.header--navBar-container i {
+  display: none;
+}
+.header--navBar-container input {
+  display: none;
+}
+
+.header--navBar-container ul {
+  display: block;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.socialMedia-container {
+  display: flex;
+  justify-content: flex-start;
+}
+.main--boxes-container {
+  display: flex;
+  flex-direction: row;
+}
+.main--brewing-container p {
+  font-size: 2.8rem;
+}
+.main--cardsBrief-Container {
+  display: flex;
+  flex-direction: row;
+}
+.beers--cards-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.beer--card-content {
+  max-width: 350px;
+  margin: 30px;
+}

@@ -1,0 +1,286 @@
+/* 
+1. Posicionamiento --> static, absolute, relative, fixed
+2. Modelo de caja (Box model) --> margin, border, padding, content
+3. Tipografía --> tipos, tamaños de fuente, etc
+4. Estilos visuales --> box-shadow, border-radius, gradient, etc
+5. Otros --> reglas CSS y más */
+
+:root {
+  /* Colores */
+  --Tibu-grey: rgb(58, 56, 60);
+  --black: #000000;
+  --just-white: #ffffff;
+  --TitlesColor: goldenrod;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 62.5%;
+  font-family: "Katibeh", cursive;
+  color: var(--just-white);
+}
+body {
+  background-color: var(--black);
+  min-height: 100vh;
+}
+header {
+  width: 100vw;
+}
+.header--logoNav-maincontainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.header--logo-container {
+  width: 100px;
+  height: 150px;
+  margin: 20px;
+  background-image: url("../img/Recurso\ 4@4x.png");
+  background-size: contain; /* Asegurar que no se deforme y siempre este en el tamaño del contenedor */
+  background-position: center;
+  background-repeat: no-repeat; /* si fuera mas pequeña la imagen se replicaría la imagen  */
+  z-index: 4;
+}
+.header--navBar-container {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+/* Desaparece el listado de la hamburguesa y el checkbox*/
+ul {
+  display: none;
+  text-decoration: none;
+}
+
+input {
+  opacity: 0;
+  cursor: pointer;
+  margin: 20px;
+  /* display: none; */
+  z-index: 4;
+}
+
+/* Cuando se presione el checkbox despliegue el menu */
+
+input:checked ~ ul {
+  display: block;
+  position: absolute;
+  margin-top: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--black);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+}
+
+.fa-times {
+  margin: 20px;
+  font-size: 28px;
+  color: #f2f2f2;
+  position: absolute;
+  z-index: 4;
+}
+.fa-times:hover {
+  color: var(--TitlesColor);
+}
+.link {
+  text-decoration: none;
+  color: white;
+  margin: 25px;
+  font-size: 3rem;
+}
+.link:hover {
+  border-bottom: 2px solid #ffffff;
+  padding: 5px;
+}
+li {
+  display: block;
+  margin: 15px;
+  color: white;
+  padding: 10px;
+  list-style: none;
+  /* border-bottom: 1px solid grey; */
+}
+
+#ham {
+  margin: 20px;
+  font-size: 28px;
+  color: var(--just-white);
+  /* z-index: 4; */
+  position: absolute;
+}
+#ham:hover {
+  color: var(--TitlesColor);
+}
+.socialMedia-container {
+  display: flex;
+  justify-content: center;
+}
+.linkSocial {
+  margin: 0 10px;
+  padding: 0;
+  font-size: 2rem;
+}
+.linkSocial a {
+  color: var(--just-white);
+}
+.linkSocial a:hover {
+  color: var(--TitlesColor);
+}
+.header--introPage-container {
+  min-width: 280px;
+  min-height: 300px;
+  margin: 10px auto;
+  background-image: url("../img/Fondo.png");
+  background-size: cover; /* Asegurar que no se deforme y siempre este en el tamaño del contenedor */
+  background-position: center;
+  background-repeat: no-repeat; /* si fuera mas pequeña la imagen se replicaría la imagen  */
+}
+
+/* ****************** MAIN ******************** */
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.main--boxes-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  margin: 40px 0;
+}
+.main--cardBox-container {
+  margin: 10px;
+}
+.main--cardBox-container a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+.main--cardBox-container a i {
+  margin-bottom: 60px;
+  color: var(--TitlesColor);
+}
+.fontCard {
+  position: absolute;
+  font-size: 3.3rem;
+  color: var(--just-white);
+  z-index: 2;
+}
+.imgBox {
+  max-width: 100%;
+  min-width: 250px;
+  height: auto;
+  vertical-align: middle;
+  margin: 20px auto;
+}
+.main--brewing-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.mainTittles {
+  color: var(--TitlesColor);
+  font-size: 4rem;
+  margin-bottom: 15px;
+}
+.main--brewing-container p {
+  color: var(--just-white);
+  text-align: justify;
+  font-size: 2.3rem;
+  margin: 20px;
+}
+.main--cardsBrief-Container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.imageContainer {
+  margin: 20px;
+  max-width: 375px;
+  max-height: 375px;
+  min-width: 220px;
+  min-height: 220px;
+}
+.imgBrewing {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.main--beers-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  margin-top: 50px;
+}
+.beer--card-content {
+  /*  CONTENEDOR DE TARJETAS CERVEZAS */
+  margin: 20px;
+  /* background-color: var(--Tibu-grey); */
+}
+.beer--img-content {
+  max-width: 540px;
+  max-height: 540px;
+  min-width: 220px;
+  min-height: 220px;
+  margin: 10px auto;
+}
+.beer--img-content img {
+  width: 100%;
+  height: 100%;
+  min-width: 300px;
+  object-fit: contain;
+}
+.beer--card-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 480px;
+  min-width: 320px;
+  margin: 10px auto;
+  color: var(--just-white);
+  font-size: 2.2rem;
+  text-align: center;
+}
+.beer--card-text a {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--just-white);
+}
+.beer--card-text h3 {
+  font-size: 2.8rem;
+}
+footer {
+  font-size: 2rem;
+  margin-left: 20px;
+  margin-top: 40px;
+  margin-bottom: 10px;
+}
+footer h2 {
+  margin-bottom: 10px;
+}
+.footer--contact-container h2 {
+  margin-top: 20px;
+}
+footer nav {
+  margin: 15px 0;
+}
