@@ -176,14 +176,16 @@ main {
 }
 .fontCard {
   position: absolute;
-  font-size: 3.3rem;
+  font-size: 2.9rem;
   color: var(--just-white);
   z-index: 2;
+  /* -webkit-text-stroke: 0.001px var(--TitlesColor); */
 }
 .imgBox {
-  max-width: 100%;
-  min-width: 250px;
+  max-width: 380px;
+  min-width: 347px;
   height: auto;
+  max-height: 361px;
   vertical-align: middle;
   margin: 20px auto;
 }
@@ -229,12 +231,13 @@ main {
   justify-content: center;
   align-items: center;
   width: 100vw;
-  margin-top: 50px;
+  margin-top: 80px;
 }
 .beer--card-content {
   /*  CONTENEDOR DE TARJETAS CERVEZAS */
   margin: 20px;
-  /* background-color: var(--Tibu-grey); */
+  background-color: var(--black);
+  border-radius: 5%;
 }
 .beer--img-content {
   max-width: 540px;
