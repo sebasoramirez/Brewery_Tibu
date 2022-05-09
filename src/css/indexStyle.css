@@ -20,6 +20,7 @@
 }
 html {
   font-size: 62.5%;
+  /* font-family: "Source Sans Pro", sans-serif; */
   font-family: "Katibeh", cursive;
   color: var(--just-white);
 }
@@ -36,8 +37,8 @@ header {
   justify-content: space-between;
 }
 .header--logo-container {
-  width: 100px;
-  height: 150px;
+  width: 80px;
+  height: 100px;
   margin: 20px;
   background-image: url("../img/Recurso\ 4@4x.png");
   background-size: contain; /* Asegurar que no se deforme y siempre este en el tamaño del contenedor */
@@ -94,7 +95,7 @@ input:checked ~ ul {
 .link {
   text-decoration: none;
   color: white;
-  margin: 25px;
+  margin: 15px;
   font-size: 3rem;
 }
 .link:hover {
@@ -103,9 +104,8 @@ input:checked ~ ul {
 }
 li {
   display: block;
-  margin: 15px;
   color: white;
-  padding: 10px;
+  margin: auto 0;
   list-style: none;
   /* border-bottom: 1px solid grey; */
 }
@@ -204,7 +204,7 @@ main {
 .main--brewing-container p {
   color: var(--just-white);
   text-align: justify;
-  font-size: 2.3rem;
+  font-size: 2.5rem;
   margin: 20px;
 }
 .main--cardsBrief-Container {
@@ -261,13 +261,13 @@ main {
   min-width: 320px;
   margin: 10px auto;
   color: var(--just-white);
-  font-size: 2.2rem;
-  text-align: center;
+  font-size: 2.5rem;
+  text-align: justify;
 }
 .beer--card-text a {
   display: inline-block;
   text-decoration: none;
-  color: var(--just-white);
+  color: var(--TitlesColor);
 }
 .beer--card-text h3 {
   font-size: 2.8rem;
